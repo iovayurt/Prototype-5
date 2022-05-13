@@ -31,11 +31,10 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
 
-            UpdateScore(5);
         }
     }
 
-    private void UpdateScore(int addToScore)
+    public void UpdateScore(int addToScore)
     {
         score += addToScore;
         scoreText.text = "Score: " + score;
