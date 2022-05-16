@@ -9,12 +9,18 @@ public class DifficultyButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();   
+        button = GetComponent<Button>();
+        button.onClick.AddListener(SetDifficulty);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void SetDifficulty()
+    {
+        Debug.Log(gameObject.name + "was clicked");
     }
 }
